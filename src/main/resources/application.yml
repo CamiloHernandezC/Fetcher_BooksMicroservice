@@ -1,0 +1,20 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: Books
+  datasource:
+    url: jdbc:mysql://localhost:3306/wookie_books
+    username: wookie
+    password: wookie_books
+  jpa:
+    generate-ddl: true
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8083/eureka
