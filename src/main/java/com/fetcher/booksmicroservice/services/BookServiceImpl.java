@@ -33,9 +33,9 @@ public class BookServiceImpl implements BookServiceInterface{
 
 	@Override
 	public BookDTO save(BookDTO newBook) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+		Book entity = converter.toEntity(newBook);
+		entity = repository.save(entity);
+		return converter.toDTO(entity);	}
 
 	@Override
 	public Optional<BookDTO> findById(Long id) {
