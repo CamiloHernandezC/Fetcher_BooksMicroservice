@@ -5,11 +5,9 @@ spring:
   application:
     name: Books
   datasource:
-    url: jdbc:mysql://localhost:3306/wookie_books
+    url: jdbc:h2:tcp://localhost:9090/mem:wookie_books
     username: wookie
     password: wookie_books
-  jpa:
-    generate-ddl: true
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
